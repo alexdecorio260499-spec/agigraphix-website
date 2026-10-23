@@ -6,8 +6,6 @@ import {
   Mail, 
   Phone, 
   MapPin, 
-  Globe, 
-  Share2, 
   Bell, 
   Sliders, 
   Save, 
@@ -37,17 +35,6 @@ interface SettingsState {
   workingHoursWeekday: string;
   workingHoursSaturday: string;
 
-  // Social
-  facebookUrl: string;
-  instagramUrl: string;
-  linkedinUrl: string;
-  whatsappNumber: string;
-
-  // SEO & Meta
-  metaTitle: string;
-  metaDescription: string;
-  googleAnalyticsId: string;
-
   // Notifications
   notifyOnNewEnquiry: boolean;
   autoReplyClient: boolean;
@@ -72,15 +59,6 @@ const DEFAULT_SETTINGS: SettingsState = {
   workingHoursWeekday: "Monday – Friday: 08:00 – 17:00",
   workingHoursSaturday: "Saturday: 08:00 – 12:30",
 
-  facebookUrl: "https://facebook.com/agigraphix",
-  instagramUrl: "https://instagram.com/agigraphix",
-  linkedinUrl: "https://linkedin.com/company/agigraphix",
-  whatsappNumber: "+230 5250 1234",
-
-  metaTitle: "Agigraphix | Premium Signage, Printing & Fabrication Mauritius",
-  metaDescription: "Agigraphix Ltd is Mauritius's premier visual communication studio specializing in outdoor signage, large format printing, acrylic fabrication and event installations.",
-  googleAnalyticsId: "G-AGI2026MUU",
-
   notifyOnNewEnquiry: true,
   autoReplyClient: true,
   weeklyDigest: false,
@@ -90,7 +68,7 @@ const STORAGE_KEY = "agigraphix_admin_settings_v1";
 
 export default function AdminSettingsPage() {
   const [settings, setSettings] = useState<SettingsState>(DEFAULT_SETTINGS);
-  const [activeTab, setActiveTab] = useState<"general" | "contact" | "social" | "seo" | "notifications">("general");
+  const [activeTab, setActiveTab] = useState<"general" | "contact" | "notifications">("general");
   const [isSaving, setIsSaving] = useState(false);
   const [showSavedToast, setShowSavedToast] = useState(false);
 
@@ -141,8 +119,6 @@ export default function AdminSettingsPage() {
   const tabs = [
     { id: "general", label: "General & Branding", icon: Building2 },
     { id: "contact", label: "Contact & Hours", icon: Phone },
-    { id: "social", label: "Social Media", icon: Share2 },
-    { id: "seo", label: "SEO & Analytics", icon: Globe },
     { id: "notifications", label: "Notifications", icon: Bell },
   ] as const;
 
@@ -441,106 +417,7 @@ export default function AdminSettingsPage() {
             </div>
           )}
 
-          {/* TAB 3: SOCIAL MEDIA */}
-          {activeTab === "social" && (
-            <div className="space-y-6">
-              <div className="border-b border-gray-100 pb-4">
-                <h3 className="text-base font-bold text-agigraphix-black uppercase tracking-wide">Social Media & Direct Messaging</h3>
-                <p className="text-xs text-gray-500">Connected social channel URLs shown in footer and contact page.</p>
-              </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Facebook Page URL</label>
-                  <input
-                    type="url"
-                    value={settings.facebookUrl}
-                    onChange={(e) => handleChange("facebookUrl", e.target.value)}
-                    placeholder="https://facebook.com/..."
-                    className="w-full px-4 py-2.5 text-sm bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-agigraphix-red focus:bg-white transition-colors"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Instagram Profile URL</label>
-                  <input
-                    type="url"
-                    value={settings.instagramUrl}
-                    onChange={(e) => handleChange("instagramUrl", e.target.value)}
-                    placeholder="https://instagram.com/..."
-                    className="w-full px-4 py-2.5 text-sm bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-agigraphix-red focus:bg-white transition-colors"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">LinkedIn Company Page</label>
-                  <input
-                    type="url"
-                    value={settings.linkedinUrl}
-                    onChange={(e) => handleChange("linkedinUrl", e.target.value)}
-                    placeholder="https://linkedin.com/company/..."
-                    className="w-full px-4 py-2.5 text-sm bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-agigraphix-red focus:bg-white transition-colors"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">WhatsApp Business Direct Number</label>
-                  <input
-                    type="text"
-                    value={settings.whatsappNumber}
-                    onChange={(e) => handleChange("whatsappNumber", e.target.value)}
-                    placeholder="+230 5..."
-                    className="w-full px-4 py-2.5 text-sm bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-agigraphix-red focus:bg-white transition-colors"
-                  />
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* TAB 4: SEO & ANALYTICS */}
-          {activeTab === "seo" && (
-            <div className="space-y-6">
-              <div className="border-b border-gray-100 pb-4">
-                <h3 className="text-base font-bold text-agigraphix-black uppercase tracking-wide">Search Engine Optimization & Tracking</h3>
-                <p className="text-xs text-gray-500">Configure global metadata tags and Google Analytics measurement IDs.</p>
-              </div>
-
-              <div className="space-y-6">
-                <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Default Meta Title</label>
-                  <input
-                    type="text"
-                    value={settings.metaTitle}
-                    onChange={(e) => handleChange("metaTitle", e.target.value)}
-                    className="w-full px-4 py-2.5 text-sm bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-agigraphix-red focus:bg-white transition-colors"
-                  />
-                  <span className="text-[11px] text-gray-400 mt-1 block">Optimal length: 50–60 characters.</span>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Default Meta Description</label>
-                  <textarea
-                    rows={3}
-                    value={settings.metaDescription}
-                    onChange={(e) => handleChange("metaDescription", e.target.value)}
-                    className="w-full px-4 py-2.5 text-sm bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-agigraphix-red focus:bg-white transition-colors resize-none"
-                  />
-                  <span className="text-[11px] text-gray-400 mt-1 block">Displayed on Google search result snippets.</span>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Google Analytics Measurement ID</label>
-                  <input
-                    type="text"
-                    value={settings.googleAnalyticsId}
-                    onChange={(e) => handleChange("googleAnalyticsId", e.target.value)}
-                    placeholder="G-XXXXXXXXXX"
-                    className="w-full md:w-1/2 px-4 py-2.5 text-sm bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-agigraphix-red focus:bg-white transition-colors font-mono"
-                  />
-                </div>
-              </div>
-            </div>
-          )}
 
           {/* TAB 5: NOTIFICATIONS */}
           {activeTab === "notifications" && (

@@ -2,13 +2,6 @@
 
 import Link from "next/link";
 
-const navLinks = [
-  { name: "Work", href: "/work" },
-  { name: "Services", href: "/services" },
-  { name: "About", href: "/about" },
-  { name: "Industries", href: "/#industries" },
-  { name: "Contact", href: "/contact" },
-];
 
 export function Footer() {
   return (
