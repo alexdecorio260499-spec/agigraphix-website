@@ -48,26 +48,26 @@ export default function Home() {
           aria-hidden="true"
         />
         {/* Subtle architectural gradient overlay ensuring text readability without hiding the building */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-r from-agigraphix-black/90 via-agigraphix-black/65 to-agigraphix-black/40" />
-        <div className="absolute inset-0 z-0 bg-gradient-to-t from-agigraphix-black/95 via-transparent to-agigraphix-black/40" />
+        <div className="absolute inset-0 z-0 bg-agigraphix-black/60" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-t from-agigraphix-black/95 via-transparent to-agigraphix-black/50" />
         
         <div className="container mx-auto px-6 max-w-7xl relative z-10 flex flex-col justify-between h-full flex-grow">
-          {/* Top & Middle: Headline, Intro Paragraph & Compact About Introduction */}
-          <div className="max-w-3xl mb-8 lg:mb-10">
+          {/* Top & Middle: Headline, Intro Paragraph & Compact About Introduction (Centered) */}
+          <div className="w-full max-w-3xl mx-auto text-center flex flex-col items-center mb-8 lg:mb-10">
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-black text-white tracking-tighter uppercase leading-[0.95] mb-4">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-black text-white tracking-tighter uppercase leading-[0.95] mb-4 text-center">
               We Make <br />
               Brands <span className="text-agigraphix-red">Visible.</span>
             </h1>
 
             {/* Introductory Paragraph */}
-            <p className="text-white/85 text-base sm:text-lg md:text-xl font-normal leading-relaxed mb-5 max-w-2xl">
+            <p className="text-white/85 text-base sm:text-lg md:text-xl font-normal leading-relaxed mb-5 max-w-2xl mx-auto text-center">
               From bespoke signage and large-format printing to displays and branded environments, we turn ideas into physical experiences.
             </p>
 
             {/* Compact About Agigraphix Introduction */}
-            <div className="pt-3 border-t border-white/15 max-w-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs sm:text-sm text-white/70">
-              <div className="flex items-center gap-2">
+            <div className="pt-3 border-t border-white/15 max-w-2xl w-full flex flex-col sm:flex-row sm:items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-white/70 text-center">
+              <div className="flex items-center justify-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-agigraphix-red shrink-0" />
                 <span className="text-white/80 font-medium">
                   Established in 2001 &middot; Mauritius’s premier visual communication & fabrication studio.
@@ -75,7 +75,7 @@ export default function Home() {
               </div>
               <Link 
                 href="/about" 
-                className="inline-flex items-center font-bold text-agigraphix-red hover:text-white transition-colors group shrink-0"
+                className="inline-flex items-center justify-center font-bold text-agigraphix-red hover:text-white transition-colors group shrink-0"
               >
                 Discover Agigraphix <ArrowRight className="ml-1.5 w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </Link>
