@@ -4,14 +4,17 @@ import { ArrowRight } from "lucide-react";
 import { MOCK_SERVICES, MOCK_PROJECTS } from "@/lib/data";
 
 export async function generateStaticParams() {
-  return MOCK_SERVICES.map((service) => ({
-    slug: service.slug,
-  }));
+  return [
+    ...MOCK_SERVICES.map((service) => ({
+      slug: service.slug,
+    })),
+    { slug: "events" },
+  ];
 }
 
 export default async function ServiceDetail({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const service = MOCK_SERVICES.find(s => s.slug === slug);
+  const service = MOCK_SERVICES.find(s => s.slug === slug || (slug === "events" && s.slug === "events-exhibitions"));
   
   if (!service) {
     notFound();
