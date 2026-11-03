@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <>
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-[calc(100vh-88px)] flex flex-col justify-between overflow-hidden bg-agigraphix-black text-white pt-6 pb-6 md:pt-8 md:pb-8 lg:pt-10 lg:pb-8">
+      <section className="relative min-h-[calc(100vh-88px)] flex flex-col justify-between overflow-hidden bg-agigraphix-black text-white">
         {/* Full-width Photographic Background: Agigraphix Headquarters */}
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-60 scale-100 transition-transform duration-1000 ease-out"
@@ -52,38 +52,40 @@ export default function Home() {
         <div className="absolute inset-0 z-0 bg-gradient-to-t from-agigraphix-black/95 via-transparent to-agigraphix-black/50" />
         
         <div className="container mx-auto px-6 max-w-7xl relative z-10 flex flex-col justify-between h-full flex-grow">
-          {/* Top & Middle: Headline, Intro Paragraph & Compact About Introduction (Centered) */}
-          <div className="w-full max-w-3xl mx-auto text-center flex flex-col items-center mb-8 lg:mb-10">
-            {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-black text-white tracking-tighter uppercase leading-[0.95] mb-4 text-center">
-              We Make <br />
-              Brands <span className="text-agigraphix-red">Visible.</span>
-            </h1>
+          {/* Centered between Header (top) and Services Section (bottom) */}
+          <div className="flex-1 flex flex-col items-center justify-center py-10 sm:py-14 md:py-16 lg:py-20">
+            <div className="w-full max-w-3xl mx-auto text-center flex flex-col items-center">
+              {/* Headline */}
+              <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-black text-white tracking-tighter uppercase leading-[0.95] mb-4 text-center">
+                We Make <br />
+                Brands <span className="text-agigraphix-red">Visible.</span>
+              </h1>
 
-            {/* Introductory Paragraph */}
-            <p className="text-white/85 text-base sm:text-lg md:text-xl font-normal leading-relaxed mb-5 max-w-2xl mx-auto text-center">
-              From bespoke signage and large-format printing to displays and branded environments, we turn ideas into physical experiences.
-            </p>
+              {/* Introductory Paragraph */}
+              <p className="text-white/85 text-base sm:text-lg md:text-xl font-normal leading-relaxed mb-5 max-w-2xl mx-auto text-center">
+                From bespoke signage and large-format printing to displays and branded environments, we turn ideas into physical experiences.
+              </p>
 
-            {/* Compact About Agigraphix Introduction */}
-            <div className="pt-3 border-t border-white/15 max-w-2xl w-full flex flex-col sm:flex-row sm:items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-white/70 text-center">
-              <div className="flex items-center justify-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-agigraphix-red shrink-0" />
-                <span className="text-white/80 font-medium">
-                  Established in 2001 &middot; Mauritius’s premier visual communication & fabrication studio.
-                </span>
+              {/* Compact About Agigraphix Introduction */}
+              <div className="pt-3 border-t border-white/15 max-w-2xl w-full flex flex-col sm:flex-row sm:items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-white/70 text-center">
+                <div className="flex items-center justify-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-agigraphix-red shrink-0" />
+                  <span className="text-white/80 font-medium">
+                    Established in 2001 &middot; Mauritius’s premier visual communication & fabrication studio.
+                  </span>
+                </div>
+                <Link 
+                  href="/about" 
+                  className="inline-flex items-center justify-center font-bold text-agigraphix-red hover:text-white transition-colors group shrink-0"
+                >
+                  Discover Agigraphix <ArrowRight className="ml-1.5 w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
-              <Link 
-                href="/about" 
-                className="inline-flex items-center justify-center font-bold text-agigraphix-red hover:text-white transition-colors group shrink-0"
-              >
-                Discover Agigraphix <ArrowRight className="ml-1.5 w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-              </Link>
             </div>
           </div>
 
           {/* Bottom: Four Horizontal Service Cards */}
-          <div className="w-full">
+          <div className="w-full pb-6 sm:pb-8 md:pb-10 lg:pb-12">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-4 xl:gap-5">
               {HERO_SERVICES.map((service) => (
                 <Link
