@@ -6,7 +6,7 @@ export default function AboutPage() {
     <div className="bg-white min-h-screen">
       {/* Hero */}
       <section className="bg-agigraphix-black text-white pt-20 pb-32 relative overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070')] bg-cover bg-center mix-blend-overlay" />
+        <div className="absolute inset-0 z-0 opacity-15 bg-[url('/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Cut_Out_Letters/signage-cut-out-letters-009.webp')] bg-cover bg-center mix-blend-overlay" />
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter leading-none mb-8 max-w-4xl">
             25+ YEARS <br />

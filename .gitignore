@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# raw source photos (curated assets in public/images/AGIGRAPHIX_WEBSITE_ASSETS)
+public/images/AGIGRAPHIX IMAGES/
+

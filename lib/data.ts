@@ -17,71 +17,151 @@ export type Project = {
 export const MOCK_PROJECTS: Project[] = [
   {
     id: "1",
-    title: "LUX* Grand Baie Signage",
+    title: "LUX* & Coastal Resort Signage",
     slug: "lux-grand-baie-signage",
-    client: "LUX* Resorts",
+    client: "LUX* Resorts & Hotels",
     location: "Grand Baie, Mauritius",
     year: "2023",
-    description: "Complete external and internal signage solution for a luxury resort. The project included illuminated wayfinding, premium room numbers, and large-scale architectural lettering designed to withstand coastal weather conditions.",
+    description: "Complete external and internal architectural signage solution for luxury coastal resorts. The project included precision-cut stone wall lettering, illuminated wayfinding, and large-scale architectural monument signage engineered to withstand demanding coastal weather conditions.",
     category: "Signage",
     industry: "Hospitality",
-    coverImage: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop",
+    coverImage: "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Cut_Out_Letters/signage-cut-out-letters-005.webp",
     galleryImages: [
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=2025&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=2070&auto=format&fit=crop"
+      "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Non_Luminous/signage-non-luminous-005.webp",
+      "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Luminous/signage-luminous-015.webp",
+      "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Non_Luminous/signage-non-luminous-008.webp"
     ],
-    services: ["Luminous Signage", "Wayfinding", "3D Letters"],
+    services: ["Architectural Cut-Out Letters", "Monument Signage", "Wayfinding & Interpretive Totems"],
     featured: true
   },
   {
     id: "2",
-    title: "Tribeca Mall Retail Branding",
+    title: "Tribeca Central Retail & Food Court",
     slug: "tribeca-mall-retail",
     client: "Tribeca Central",
     location: "Trianon, Mauritius",
     year: "2024",
-    description: "Large-format printing and custom acrylic fabrication for multiple retail spaces within the new mall, ensuring high visibility and brand consistency across various storefronts.",
+    description: "Large-format printing, illuminated overhead food court lightboxes, and custom acrylic fabrication across major retail corridors, delivering maximum brand visibility and seamless visual communication.",
     category: "Printing",
     industry: "Retail",
-    coverImage: "https://images.unsplash.com/photo-1604014237800-1c9102c219da?q=80&w=2070&auto=format&fit=crop",
+    coverImage: "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Luminous/signage-luminous-011.webp",
     galleryImages: [
-      "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?q=80&w=2070&auto=format&fit=crop",
+      "/images/AGIGRAPHIX_WEBSITE_ASSETS/04_EVENTS_EXHIBITIONS/Booths/events-booth-004.webp",
+      "/images/AGIGRAPHIX_WEBSITE_ASSETS/03_DISPLAYS_FURNITURE/Reception_Desks/display-reception-desk-004.webp",
+      "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Luminous/signage-luminous-014.webp"
     ],
-    services: ["Large Format Printing", "Acrylic Fabrication", "Window Graphics"],
+    services: ["Illuminated Food Court Lightboxes", "Experiential Retail Activations", "3D Channel Letters"],
     featured: true
   },
   {
     id: "3",
-    title: "MCB Corporate Headquarters",
+    title: "Rogers Capital & Corporate HQ",
     slug: "mcb-corporate-hq",
-    client: "MCB Group",
-    location: "Ebene, Mauritius",
-    year: "2022",
-    description: "Bespoke internal corporate branding and frosted glass graphics for a modern corporate environment, providing privacy while maintaining an open, light-filled aesthetic.",
+    client: "Rogers Capital",
+    location: "Port Louis & Ebene, Mauritius",
+    year: "2023",
+    description: "Large-scale building facade architectural cladding, high-level corporate rooftop signage, and interior executive reception 3D lettering for corporate headquarters.",
     category: "Displays",
     industry: "Corporate",
-    coverImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop",
+    coverImage: "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Non_Luminous/signage-non-luminous-016.webp",
     galleryImages: [
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2069&auto=format&fit=crop"
+      "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Luminous/signage-luminous-008.webp",
+      "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Cut_Out_Letters/signage-cut-out-letters-010.webp",
+      "/images/AGIGRAPHIX_WEBSITE_ASSETS/02_LARGE_FORMAT_PRINTING/Wall_Cladding_Sticker_Application/large-format-wall-cladding-008.webp"
     ],
-    services: ["Corporate Signage", "Frosted Films", "Custom Displays"],
+    services: ["Building Facade Cladding", "Corporate 3D Letters", "Heritage Museum Wall Cladding"],
     featured: true
   },
   {
     id: "4",
-    title: "Tech Conference Exhibition",
+    title: "Indian Ocean Summit & Conferences",
     slug: "tech-conference-exhibition",
-    client: "Tech Africa",
+    client: "Indian Ocean Commission",
     location: "SVICC, Mauritius",
     year: "2024",
-    description: "End-to-end design, fabrication, and installation of a massive modular exhibition booth featuring LED displays, hanging signs, and custom counters.",
+    description: "End-to-end design, fabrication, and installation of major regional conference stage backdrops, dual pull-up banner totems, registration counters, and speaker media walls.",
     category: "Events",
     industry: "Events",
-    coverImage: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop",
+    coverImage: "/images/AGIGRAPHIX_WEBSITE_ASSETS/04_EVENTS_EXHIBITIONS/Backdrops/events-backdrop-006.webp",
     galleryImages: [
-      "https://images.unsplash.com/photo-1531058020387-3be344556be6?q=80&w=2070&auto=format&fit=crop"
+      "/images/AGIGRAPHIX_WEBSITE_ASSETS/04_EVENTS_EXHIBITIONS/Backdrops/events-backdrop-001.webp",
+      "/images/AGIGRAPHIX_WEBSITE_ASSETS/02_LARGE_FORMAT_PRINTING/Roll_Up_Banners/large-format-roll-up-002.webp",
+      "/images/AGIGRAPHIX_WEBSITE_ASSETS/04_EVENTS_EXHIBITIONS/Backdrops/events-backdrop-012.webp"
     ],
-    services: ["Events Setup", "Fabrication", "Large Format Printing"],
+    services: ["Stage Media Backdrops", "Conference Roll-Up Totems", "Registration Counters"],
+    featured: true
+  },
+  {
+    id: "5",
+    title: "Automotive Showroom Portals & Canopy",
+    slug: "automotive-showroom-branding",
+    client: "GAC & Hyundai Mauritius",
+    location: "Pailles, Mauritius",
+    year: "2024",
+    description: "High-impact automotive showroom entrance portals, brushed metal 3D canopy logos, and illuminated freestanding showroom floor lettering for premier automotive dealerships.",
+    category: "Signage",
+    industry: "Retail",
+    coverImage: "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Luminous/signage-luminous-017.webp",
+    galleryImages: [
+      "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Luminous/signage-luminous-023.webp",
+      "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Luminous/signage-luminous-026.webp",
+      "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Luminous/signage-luminous-027.webp"
+    ],
+    services: ["Illuminated Showroom Portals", "3D Metal Canopy Logos", "Floor Luminous Letters"],
+    featured: false
+  },
+  {
+    id: "6",
+    title: "UTMB Trail Running Finish Line Gantry",
+    slug: "utmb-sports-events",
+    client: "UTMB Mauritius by HOKA",
+    location: "Bel Ombre, Mauritius",
+    year: "2024",
+    description: "Massive outdoor illuminated trail running finish line gantry structure with integrated track spotlights, branding towers, and sports event perimeter banners.",
+    category: "Events",
+    industry: "Events",
+    coverImage: "/images/AGIGRAPHIX_WEBSITE_ASSETS/04_EVENTS_EXHIBITIONS/Backdrops/events-backdrop-014.webp",
+    galleryImages: [
+      "/images/AGIGRAPHIX_WEBSITE_ASSETS/04_EVENTS_EXHIBITIONS/Backdrops/events-backdrop-003.webp",
+      "/images/AGIGRAPHIX_WEBSITE_ASSETS/04_EVENTS_EXHIBITIONS/3D_Letters_PVC_Acrylic/events-3d-letters-003.webp"
+    ],
+    services: ["Illuminated Finish Line Gantry", "Golf & Sports Branding", "3D Event Letters"],
+    featured: false
+  },
+  {
+    id: "7",
+    title: "Bentley Luxury Acrylic Fabrication",
+    slug: "bentley-luxury-fabrication",
+    client: "Bentley Motors",
+    location: "Mauritius",
+    year: "2023",
+    description: "Bespoke clear acrylic furniture with laser-engraved luxury branding, CNC-machined acrylic display lettering, and illuminated bottle glorifiers crafted to the highest luxury standards.",
+    category: "Displays",
+    industry: "Corporate",
+    coverImage: "/images/AGIGRAPHIX_WEBSITE_ASSETS/03_DISPLAYS_FURNITURE/Acrylic_Coffee_Tables/display-acrylic-coffee-table-001.webp",
+    galleryImages: [
+      "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Cut_Out_Letters/signage-cut-out-letters-009.webp",
+      "/images/AGIGRAPHIX_WEBSITE_ASSETS/03_DISPLAYS_FURNITURE/Price_Holders/display-price-holder-003.webp"
+    ],
+    services: ["Acrylic Coffee Tables", "Laser & CNC Acrylic Cutting", "Illuminated POS Displays"],
+    featured: false
+  },
+  {
+    id: "8",
+    title: "Healthcare Specialized Wall Murals",
+    slug: "healthcare-interior-cladding",
+    client: "Clinique & Imaging Centers",
+    location: "Curepipe, Mauritius",
+    year: "2023",
+    description: "High-resolution architectural vinyl wall cladding and specialized panoramic landscape murals designed for medical imaging environments and hospitality suites.",
+    category: "Printing",
+    industry: "Hospitality",
+    coverImage: "/images/AGIGRAPHIX_WEBSITE_ASSETS/02_LARGE_FORMAT_PRINTING/Wall_Cladding_Sticker_Application/large-format-wall-cladding-009.webp",
+    galleryImages: [
+      "/images/AGIGRAPHIX_WEBSITE_ASSETS/02_LARGE_FORMAT_PRINTING/Wall_Cladding_Sticker_Application/large-format-wall-cladding-001.webp",
+      "/images/AGIGRAPHIX_WEBSITE_ASSETS/02_LARGE_FORMAT_PRINTING/Wall_Cladding_Sticker_Application/large-format-wall-cladding-003.webp"
+    ],
+    services: ["Large Format Wall Cladding", "Interior Murals", "Window & Door Vinyls"],
     featured: false
   }
 ];
@@ -92,7 +172,7 @@ export const MOCK_SERVICES = [
     name: "Signage",
     slug: "signage",
     description: "Make your brand impossible to miss with bespoke outdoor and indoor signage solutions.",
-    image: "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?q=80&w=1974&auto=format&fit=crop",
+    image: "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Luminous/signage-luminous-015.webp",
     capabilities: [
       "Luminous signage",
       "Non-luminous signage",
@@ -108,7 +188,7 @@ export const MOCK_SERVICES = [
     name: "Large Format Printing",
     slug: "large-format-printing",
     description: "High-resolution, large-scale prints that capture attention from a distance.",
-    image: "https://images.unsplash.com/photo-1626784215001-3832c3e1e2d4?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/AGIGRAPHIX_WEBSITE_ASSETS/02_LARGE_FORMAT_PRINTING/Wall_Cladding_Sticker_Application/large-format-wall-cladding-005.webp",
     capabilities: [
       "Billboards",
       "Vehicle wrapping",
@@ -124,7 +204,7 @@ export const MOCK_SERVICES = [
     name: "Displays & Fabrication",
     slug: "displays-fabrication",
     description: "Custom-built point-of-sale displays and architectural elements crafted with precision.",
-    image: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=1974&auto=format&fit=crop",
+    image: "/images/AGIGRAPHIX_WEBSITE_ASSETS/03_DISPLAYS_FURNITURE/Reception_Desks/display-reception-desk-002.webp",
     capabilities: [
       "POS displays",
       "Acrylic fabrication",
@@ -140,7 +220,7 @@ export const MOCK_SERVICES = [
     name: "Events & Exhibitions",
     slug: "events-exhibitions",
     description: "Turn any empty space into a branded experience for trade shows, launches, and events.",
-    image: "https://images.unsplash.com/photo-1531058020387-3be344556be6?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/AGIGRAPHIX_WEBSITE_ASSETS/04_EVENTS_EXHIBITIONS/Booths/events-booth-004.webp",
     capabilities: [
       "Modular exhibition stands",
       "Custom booths",

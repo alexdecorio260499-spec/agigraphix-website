@@ -9,6 +9,7 @@ const HERO_SERVICES = [
     tagline: "Make your brand impossible to miss.",
     link: "/services/signage",
     cta: "Explore →",
+    image: "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Luminous/signage-luminous-015.webp",
   },
   {
     number: "02",
@@ -17,6 +18,7 @@ const HERO_SERVICES = [
     tagline: "Big ideas deserve to be seen.",
     link: "/services/large-format-printing",
     cta: "Explore →",
+    image: "/images/AGIGRAPHIX_WEBSITE_ASSETS/02_LARGE_FORMAT_PRINTING/Wall_Cladding_Sticker_Application/large-format-wall-cladding-005.webp",
   },
   {
     number: "03",
@@ -25,6 +27,7 @@ const HERO_SERVICES = [
     tagline: "Custom displays built around your brand.",
     link: "/services/displays-fabrication",
     cta: "Explore →",
+    image: "/images/AGIGRAPHIX_WEBSITE_ASSETS/03_DISPLAYS_FURNITURE/Reception_Desks/display-reception-desk-002.webp",
   },
   {
     number: "04",
@@ -33,6 +36,7 @@ const HERO_SERVICES = [
     tagline: "Turn an empty space into a branded experience.",
     link: "/services/events",
     cta: "Explore →",
+    image: "/images/AGIGRAPHIX_WEBSITE_ASSETS/04_EVENTS_EXHIBITIONS/Booths/events-booth-004.webp",
   },
 ];
 
@@ -41,14 +45,14 @@ export default function Home() {
     <>
       {/* 1. HERO SECTION */}
       <section className="relative min-h-[calc(100vh-88px)] flex flex-col justify-between overflow-hidden bg-agigraphix-black text-white">
-        {/* Full-width Photographic Background: Agigraphix Headquarters */}
+        {/* Full-width Photographic Background: Agigraphix Authentic Architectural Project */}
         <div 
-          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-60 scale-100 transition-transform duration-1000 ease-out"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop')" }}
+          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-50 scale-100 transition-transform duration-1000 ease-out"
+          style={{ backgroundImage: "url('/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Non_Luminous/signage-non-luminous-016.webp')" }}
           aria-hidden="true"
         />
         {/* Subtle architectural gradient overlay ensuring text readability without hiding the building */}
-        <div className="absolute inset-0 z-0 bg-agigraphix-black/60" />
+        <div className="absolute inset-0 z-0 bg-agigraphix-black/65" />
         <div className="absolute inset-0 z-0 bg-gradient-to-t from-agigraphix-black/95 via-transparent to-agigraphix-black/50" />
         
         <div className="container mx-auto px-6 max-w-7xl relative z-10 flex flex-col justify-between h-full flex-grow">
@@ -91,12 +95,20 @@ export default function Home() {
                 <Link
                   key={service.number}
                   href={service.link}
-                  className="group relative flex flex-col justify-between p-4 sm:p-5 rounded-lg bg-black/60 hover:bg-black/85 backdrop-blur-md border border-white/15 hover:border-agigraphix-red/70 transition-all duration-300 shadow-xl hover:shadow-agigraphix-red/10 hover:-translate-y-0.5"
+                  className="group relative flex flex-col justify-between p-4 sm:p-5 rounded-lg bg-black/60 hover:bg-black/85 backdrop-blur-md border border-white/15 hover:border-agigraphix-red/70 transition-all duration-300 shadow-xl hover:shadow-agigraphix-red/10 hover:-translate-y-0.5 overflow-hidden"
                 >
+                  {/* Authentic Service Project Photo Background */}
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center opacity-25 group-hover:opacity-45 transition-all duration-500 scale-100 group-hover:scale-105"
+                    style={{ backgroundImage: `url('${service.image}')` }}
+                    aria-hidden="true"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/40 z-0" />
+
                   {/* Subtle top indicator on hover */}
-                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-transparent group-hover:bg-agigraphix-red transition-colors rounded-t-lg" />
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-transparent group-hover:bg-agigraphix-red transition-colors z-10" />
                   
-                  <div>
+                  <div className="relative z-10">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-[11px] font-mono font-bold tracking-widest text-white/50 group-hover:text-agigraphix-red transition-colors">
                         {service.label}
@@ -113,7 +125,7 @@ export default function Home() {
                     </p>
                   </div>
 
-                  <div className="pt-3 mt-3 border-t border-white/10 flex items-center justify-between text-xs font-bold uppercase tracking-wider text-white/80 group-hover:text-agigraphix-red transition-colors">
+                  <div className="relative z-10 pt-3 mt-3 border-t border-white/10 flex items-center justify-between text-xs font-bold uppercase tracking-wider text-white/80 group-hover:text-agigraphix-red transition-colors">
                     <span>{service.cta}</span>
                     <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -140,10 +152,10 @@ export default function Home() {
           {/* Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {[
-              { title: "Hotel Signage", category: "Hospitality", image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=2025&auto=format&fit=crop", slug: "lux-grand-baie-signage" },
-              { title: "Retail Branding", category: "Retail", image: "https://images.unsplash.com/photo-1604014237800-1c9102c219da?q=80&w=2070&auto=format&fit=crop", slug: "tribeca-mall-retail" },
-              { title: "Corporate HQ", category: "Corporate", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop", slug: "mcb-corporate-hq" },
-              { title: "Event Setup", category: "Events", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop", slug: "tech-conference-exhibition" },
+              { title: "Hotel Signage", category: "Hospitality", image: "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Cut_Out_Letters/signage-cut-out-letters-005.webp", slug: "lux-grand-baie-signage" },
+              { title: "Retail Branding", category: "Retail", image: "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Luminous/signage-luminous-011.webp", slug: "tribeca-mall-retail" },
+              { title: "Corporate HQ", category: "Corporate", image: "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Non_Luminous/signage-non-luminous-016.webp", slug: "mcb-corporate-hq" },
+              { title: "Event Setup", category: "Events", image: "/images/AGIGRAPHIX_WEBSITE_ASSETS/04_EVENTS_EXHIBITIONS/Backdrops/events-backdrop-006.webp", slug: "tech-conference-exhibition" },
             ].map((work, i) => (
               <Link href={`/work/${work.slug}`} key={i} className="group cursor-pointer block overflow-hidden rounded bg-gray-100 relative aspect-[3/4]">
                 <div className="absolute inset-0">
@@ -172,8 +184,8 @@ export default function Home() {
       {/* 3. FINAL CTA & STATS */}
       <section className="relative py-20 md:py-24 bg-agigraphix-black text-center overflow-hidden">
         <div 
-          className="absolute inset-0 z-0 bg-cover bg-center opacity-20 mix-blend-overlay"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1572044162444-ad60f128bdea?q=80&w=2070&auto=format&fit=crop')" }}
+          className="absolute inset-0 z-0 bg-cover bg-center opacity-25 mix-blend-overlay"
+          style={{ backgroundImage: "url('/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Cut_Out_Letters/signage-cut-out-letters-009.webp')" }}
         />
         <div className="absolute inset-0 z-0 bg-gradient-to-t from-agigraphix-black to-transparent" />
         
