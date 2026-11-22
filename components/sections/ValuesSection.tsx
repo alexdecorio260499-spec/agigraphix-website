@@ -1,4 +1,4 @@
-import { SlidersHorizontal, ShieldCheck, Crosshair } from "lucide-react";
+import { SlidersHorizontal, ShieldCheck, Target } from "lucide-react";
 
 const VALUES = [
   {
@@ -14,65 +14,79 @@ const VALUES = [
   {
     title: "PRECISION",
     desc: "Modern production methods combined with experienced craftsmanship.",
-    icon: Crosshair,
+    icon: Target,
   },
 ];
 
 export function ValuesSection() {
   return (
-    <section className="py-20 md:py-28 bg-[#111111] text-white border-t border-[#222222]">
+    <section className="py-20 md:py-28 bg-[#0C0C0C] text-white border-t border-[#1C1C1C]">
       <div className="container mx-auto px-6 max-w-7xl">
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-12 lg:gap-14">
-          
-          {/* LEFT COLUMN — SECTION INTRODUCTION (~30–35% width) */}
-          <div className="w-full lg:w-[32%] xl:w-[30%] shrink-0">
-            {/* Small red horizontal accent line */}
-            <div className="w-12 h-1 bg-[#E52525] mb-6" />
-
-            {/* Main Heading */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tighter text-white leading-tight mb-4">
+        {/* Full-width editorial header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6 pb-8 border-b border-[#222222]">
+          <div>
+            <div className="inline-flex items-center gap-2 text-[#E52525] text-xs font-mono font-bold uppercase tracking-widest mb-3">
+              <span className="w-2 h-2 rounded-full bg-[#E52525]" />
+              <span>Guiding Principles</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tighter text-white">
               OUR VALUES
             </h2>
-
-            {/* Short Introductory Line */}
-            <p className="text-[#B8B8B8] text-base md:text-lg leading-relaxed max-w-sm">
-              Three principles that guide everything we create.
-            </p>
           </div>
+          <p className="text-[#A3A3A3] text-base sm:text-lg max-w-md leading-relaxed md:text-right">
+            Three principles that guide everything we create.
+          </p>
+        </div>
 
-          {/* RIGHT COLUMN — THREE VALUE CARDS (~65–70% width) */}
-          <div className="w-full lg:w-[68%] xl:w-[70%]">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
-              {VALUES.map((val, i) => {
-                const Icon = val.icon;
-                return (
-                  <div
-                    key={i}
-                    className="bg-[#1D1D1D] hover:bg-[#232323] border border-[#343434] hover:border-[#E52525] rounded-lg p-6 sm:p-7 flex flex-col items-start justify-start h-full transition-all duration-300 group cursor-default"
-                  >
-                    {/* Minimalist White Line Icon */}
-                    <div className="mb-5">
-                      <Icon
-                        className="w-7 h-7 text-white group-hover:text-[#E52525] transition-colors duration-200"
-                        strokeWidth={1.5}
-                      />
+        {/* Unified 3-column architectural monolith */}
+        <div className="border border-[#262626] rounded-2xl overflow-hidden bg-[#141414] shadow-2xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#262626]">
+            {VALUES.map((val, i) => {
+              const Icon = val.icon;
+              return (
+                <div
+                  key={i}
+                  className="group relative p-8 sm:p-10 lg:p-12 flex flex-col justify-between min-h-[320px] bg-[#141414] hover:bg-[#181818] transition-all duration-300"
+                >
+                  {/* Subtle corner light wash on hover */}
+                  <div className="absolute top-0 right-0 w-36 h-36 bg-[#E52525]/0 group-hover:bg-[#E52525]/5 rounded-bl-full transition-all duration-500 pointer-events-none" />
+
+                  {/* Watermark index number */}
+                  <span className="absolute right-6 bottom-4 text-7xl sm:text-8xl lg:text-9xl font-black font-mono text-white/[0.03] group-hover:text-[#E52525]/10 transition-colors pointer-events-none select-none">
+                    0{i + 1}
+                  </span>
+
+                  {/* Top content */}
+                  <div>
+                    {/* Meta row: counter + icon container */}
+                    <div className="flex items-center justify-between mb-8">
+                      <span className="text-xs font-mono font-bold tracking-widest text-[#E52525] uppercase">
+                        0{i + 1} / 03
+                      </span>
+                      <div className="w-12 h-12 rounded-xl bg-black/60 border border-white/10 flex items-center justify-center text-white/80 group-hover:text-[#E52525] group-hover:border-[#E52525]/40 transition-all duration-300">
+                        <Icon className="w-6 h-6" strokeWidth={1.75} />
+                      </div>
                     </div>
 
-                    {/* Bold Uppercase Heading */}
-                    <h3 className="text-base sm:text-lg font-bold uppercase tracking-wider text-white mb-2.5">
+                    {/* Value title */}
+                    <h3 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-white mb-4">
                       {val.title}
                     </h3>
 
-                    {/* Description */}
-                    <p className="text-[#B8B8B8] text-xs sm:text-sm leading-relaxed">
+                    {/* Value description */}
+                    <p className="text-[#A3A3A3] text-sm sm:text-base leading-relaxed relative z-10 max-w-sm">
                       {val.desc}
                     </p>
                   </div>
-                );
-              })}
-            </div>
-          </div>
 
+                  {/* Expanding accent indicator */}
+                  <div className="relative mt-8 pt-4">
+                    <div className="h-0.5 w-10 bg-[#2E2E2E] group-hover:w-full group-hover:bg-[#E52525] transition-all duration-500 origin-left" />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
