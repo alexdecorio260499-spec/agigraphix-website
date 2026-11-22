@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { MOCK_SERVICES, MOCK_PROJECTS } from "@/lib/data";
+import { RelatedProductsSection } from "@/components/services/RelatedProductsSection";
 
 export async function generateStaticParams() {
   return [
@@ -83,6 +84,9 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
           </div>
         </div>
       </div>
+
+      {/* Related Products Showcase */}
+      <RelatedProductsSection serviceSlug={slug} serviceName={service.name} />
 
       {/* Related Projects */}
       {relatedProjects.length > 0 && (
