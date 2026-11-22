@@ -58,25 +58,9 @@ export default function Home() {
               </h1>
 
               {/* Introductory Paragraph */}
-              <p className="text-white/85 text-base sm:text-lg md:text-xl font-normal leading-relaxed mb-5 max-w-2xl mx-auto text-center">
+              <p className="text-white/85 text-base sm:text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto text-center">
                 From bespoke signage and large-format printing to displays and branded environments, we turn ideas into physical experiences.
               </p>
-
-              {/* Compact About Agigraphix Introduction */}
-              <div className="pt-3 border-t border-white/15 max-w-2xl w-full flex flex-col sm:flex-row sm:items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-white/70 text-center">
-                <div className="flex items-center justify-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-agigraphix-red shrink-0" />
-                  <span className="text-white/80 font-medium">
-                    Established in 2001 &middot; Mauritius’s premier visual communication & fabrication studio.
-                  </span>
-                </div>
-                <Link 
-                  href="/about" 
-                  className="inline-flex items-center justify-center font-bold text-agigraphix-red hover:text-white transition-colors group shrink-0"
-                >
-                  Discover Agigraphix <ArrowRight className="ml-1.5 w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
             </div>
           </div>
 
