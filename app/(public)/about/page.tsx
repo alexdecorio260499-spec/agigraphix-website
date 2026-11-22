@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { ValuesSection } from "@/components/sections/ValuesSection";
 import { CapabilitiesSection } from "@/components/sections/CapabilitiesSection";
 
 export default function AboutPage() {
@@ -30,26 +31,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-24 bg-agigraphix-soft-white">
-        <div className="container mx-auto px-6 max-w-7xl">
-          <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-agigraphix-black mb-16 text-center">
-            Our Values
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {[
-              { title: "BESPOKE", desc: "Every project is built around the client's needs. We don't do off-the-shelf solutions." },
-              { title: "QUALITY", desc: "Materials and production are treated with care, ensuring longevity in demanding environments." },
-              { title: "PRECISION", desc: "Modern production methods combined with experienced craftsmanship." }
-            ].map((val, i) => (
-              <div key={i} className="bg-white p-10 rounded shadow-sm border border-gray-100 relative overflow-hidden group">
-                <div className="absolute top-0 left-0 w-full h-1 bg-agigraphix-red transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
-                <h3 className="text-2xl font-bold uppercase tracking-wide text-agigraphix-black mb-4">{val.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{val.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ValuesSection />
 
       {/* Capabilities */}
       <CapabilitiesSection />
