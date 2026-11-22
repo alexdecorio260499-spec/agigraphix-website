@@ -63,7 +63,7 @@ export const MOCK_PROJECTS: Project[] = [
     description: "Large-scale building facade architectural cladding, high-level corporate rooftop signage, and interior executive reception 3D lettering for corporate headquarters.",
     category: "Displays",
     industry: "Corporate",
-    coverImage: "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Non_Luminous/signage-non-luminous-016.webp",
+    coverImage: "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Non_Luminous/signage-non-luminous-029.webp",
     galleryImages: [
       "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Luminous/signage-luminous-008.webp",
       "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Cut_Out_Letters/signage-cut-out-letters-010.webp",

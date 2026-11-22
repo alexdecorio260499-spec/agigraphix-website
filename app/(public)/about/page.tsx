@@ -45,37 +45,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Process */}
-      <section className="py-24 bg-white text-agigraphix-black">
-        <div className="container mx-auto px-6 max-w-7xl">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">Our Process</h2>
-            <p className="text-agigraphix-charcoal text-lg">From concept to finished product.</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-            <div className="hidden md:block absolute top-12 left-10 right-10 h-px bg-gray-200 z-0" />
-            
-            {[
-              { num: "01", title: "DISCOVER", desc: "You tell us what you need." },
-              { num: "02", title: "DESIGN", desc: "We develop the visual solution." },
-              { num: "03", title: "PRODUCE", desc: "Our team brings it to life." },
-              { num: "04", title: "INSTALL", desc: "We deliver and install the finished product." },
-            ].map((step, i) => (
-              <div key={i} className="relative z-10 bg-white pt-8 md:pt-0">
-                <div className="w-16 h-16 md:w-24 md:h-24 bg-gray-50 rounded-full flex items-center justify-center border border-gray-200 text-2xl md:text-3xl font-black text-gray-300 mb-6 mx-auto md:mx-0 shadow-sm">
-                  {step.num}
-                </div>
-                <div className="text-center md:text-left">
-                  <h3 className="text-xl font-bold uppercase tracking-wide mb-3">{step.title}</h3>
-                  <p className="text-gray-600">{step.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Capabilities */}
       <section className="py-24 bg-agigraphix-black text-white">
         <div className="container mx-auto px-6 max-w-7xl">
