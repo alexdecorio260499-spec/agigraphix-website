@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { MOCK_SERVICES, MOCK_PROJECTS } from "@/lib/data";
+import { MOCK_SERVICES } from "@/lib/data";
 import { getServiceGallery } from "@/lib/service-galleries";
 import { ServiceContentGallery } from "@/components/services/ServiceContentGallery";
 import { RelatedProductsSection } from "@/components/services/RelatedProductsSection";
@@ -27,11 +27,6 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
 
   // Curated 4-image 2x2 gallery for this service
   const gallery = getServiceGallery(slug);
-
-  // Find related projects (mock logic)
-  const relatedProjects = MOCK_PROJECTS.filter((p) =>
-    p.category.toLowerCase().includes(service.name.split(" ")[0].toLowerCase())
-  ).slice(0, 3);
 
   return (
     <div className="bg-white min-h-screen">
@@ -98,52 +93,6 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
 
       {/* 3. RELATED PRODUCTS SHOWCASE */}
       <RelatedProductsSection serviceSlug={slug} serviceName={service.name} />
-
-      {/* 4. RELATED PROJECTS */}
-      {relatedProjects.length > 0 && (
-        <section className="bg-gray-50 py-20 sm:py-24 border-t border-gray-100">
-          <div className="container mx-auto px-6 max-w-7xl">
-            <div className="flex items-center justify-between mb-12">
-              <div>
-                <span className="text-[#E52525] text-xs font-bold uppercase tracking-widest block mb-2">Portfolio</span>
-                <h3 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-[#111111]">
-                  Related Projects
-                </h3>
-              </div>
-              <Link 
-                href="/work" 
-                className="hidden sm:inline-flex items-center font-bold text-xs uppercase tracking-wider text-[#111111] hover:text-[#E52525] transition-colors group"
-              >
-                View All Work <ArrowRight className="ml-1.5 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-              {relatedProjects.map((p) => (
-                <Link
-                  href={`/work/${p.slug}`}
-                  key={p.id}
-                  className="group cursor-pointer block overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-md border border-gray-100 relative aspect-[4/3] transition-all duration-300"
-                >
-                  <div
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                    style={{ backgroundImage: `url('${p.coverImage}')` }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
-                  <div className="absolute bottom-0 left-0 p-6 sm:p-7 w-full">
-                    <p className="text-[#E52525] text-xs font-bold uppercase tracking-widest mb-1.5">
-                      {p.category}
-                    </p>
-                    <h4 className="text-white text-lg sm:text-xl font-bold leading-snug">
-                      {p.title}
-                    </h4>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
     </div>
   );
 }
