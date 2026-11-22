@@ -109,9 +109,9 @@ export default function Home() {
       </section>
 
       {/* 2. SELECTED WORK / PREVIOUS WORK */}
-      <section className="min-h-screen flex flex-col justify-center py-20 md:py-28 bg-white">
+      <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-6 max-w-7xl">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-16">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-12">
             <div>
               <div className="inline-flex items-center gap-2 text-[#E52525] text-xs sm:text-sm font-bold uppercase tracking-widest mb-3">
                 <span className="w-2 h-2 rounded-full bg-[#E52525]" />
@@ -133,8 +133,8 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Modular Asymmetric Grid — Matching Our Services UI/Feel */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-5 lg:gap-6">
+          {/* Modular Asymmetric Grid — Matching Our Services UI/Feel & Compact Scale */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 sm:gap-5">
             {[
               {
                 number: "01",
@@ -144,7 +144,7 @@ export default function Home() {
                 description: "Complete external and internal architectural signage solution, precision-cut stone wall lettering, and illuminated wayfinding.",
                 image: "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Cut_Out_Letters/signage-cut-out-letters-005.webp",
                 slug: "lux-grand-baie-signage",
-                gridClasses: "col-span-1 min-h-[380px] md:col-start-1 md:col-span-2 md:row-start-1 md:min-h-[440px] lg:col-start-1 lg:col-span-7 lg:row-start-1 lg:row-span-2 lg:min-h-[620px]",
+                gridClasses: "col-span-1 min-h-[340px] md:col-start-1 md:col-span-2 md:row-start-1 md:min-h-[400px] lg:col-start-1 lg:col-span-7 lg:row-start-1 lg:row-span-2 lg:min-h-[470px] xl:min-h-[490px]",
                 isLargeTitle: true,
               },
               {
@@ -155,7 +155,7 @@ export default function Home() {
                 description: "Large-format printing, illuminated overhead food court lightboxes, and custom acrylic fabrication across major retail corridors.",
                 image: "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Luminous/signage-luminous-011.webp",
                 slug: "tribeca-mall-retail",
-                gridClasses: "col-span-1 min-h-[320px] md:col-start-1 md:col-span-1 md:row-start-2 md:min-h-[320px] lg:col-start-8 lg:col-span-5 lg:row-start-1 lg:row-span-1 lg:min-h-[295px]",
+                gridClasses: "col-span-1 min-h-[250px] md:col-start-1 md:col-span-1 md:row-start-2 md:min-h-[250px] lg:col-start-8 lg:col-span-5 lg:row-start-1 lg:row-span-1 lg:min-h-[225px] xl:min-h-[235px]",
                 isLargeTitle: false,
               },
               {
@@ -166,7 +166,7 @@ export default function Home() {
                 description: "Large-scale building facade architectural cladding, high-level corporate rooftop signage, and interior executive reception 3D lettering.",
                 image: "/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Non_Luminous/signage-non-luminous-029.webp",
                 slug: "mcb-corporate-hq",
-                gridClasses: "col-span-1 min-h-[340px] md:col-start-1 md:col-span-2 md:row-start-3 md:min-h-[360px] lg:col-start-1 lg:col-span-12 lg:row-start-3 lg:row-span-1 lg:min-h-[380px]",
+                gridClasses: "col-span-1 min-h-[280px] md:col-start-1 md:col-span-2 md:row-start-3 md:min-h-[300px] lg:col-start-1 lg:col-span-12 lg:row-start-3 lg:row-span-1 lg:min-h-[320px] xl:min-h-[340px]",
                 isLargeTitle: true,
               },
               {
@@ -177,7 +177,7 @@ export default function Home() {
                 description: "End-to-end design, fabrication, and installation of regional conference stage backdrops, dual pull-up banner totems, and registration counters.",
                 image: "/images/AGIGRAPHIX_WEBSITE_ASSETS/04_EVENTS_EXHIBITIONS/Backdrops/events-backdrop-006.webp",
                 slug: "tech-conference-exhibition",
-                gridClasses: "col-span-1 min-h-[320px] md:col-start-2 md:col-span-1 md:row-start-2 md:min-h-[320px] lg:col-start-8 lg:col-span-5 lg:row-start-2 lg:row-span-1 lg:min-h-[295px]",
+                gridClasses: "col-span-1 min-h-[250px] md:col-start-2 md:col-span-1 md:row-start-2 md:min-h-[250px] lg:col-start-8 lg:col-span-5 lg:row-start-2 lg:row-span-1 lg:min-h-[225px] xl:min-h-[235px]",
                 isLargeTitle: false,
               },
             ].map((work) => (
@@ -201,7 +201,7 @@ export default function Home() {
                 <div className="absolute top-0 left-0 right-0 h-[3px] bg-transparent group-hover:bg-[#E52525] transition-colors duration-300 z-20" />
 
                 {/* Card Header: Project Number and Location */}
-                <div className="relative z-20 p-6 sm:p-7 md:p-8 flex items-center justify-between">
+                <div className="relative z-20 p-5 sm:p-6 flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
                     <span className="text-[#E52525] font-black text-sm sm:text-base tracking-widest font-mono">
                       {work.number}
@@ -214,7 +214,7 @@ export default function Home() {
                 </div>
 
                 {/* Card Footer: Category, Title, Description, and CTA */}
-                <div className="relative z-20 p-6 sm:p-7 md:p-8 flex flex-col justify-end">
+                <div className="relative z-20 p-5 sm:p-6 flex flex-col justify-end">
                   <p className="text-[#E52525] text-xs font-bold uppercase tracking-widest mb-1.5">
                     {work.category}
                   </p>
@@ -222,14 +222,14 @@ export default function Home() {
                   <h3
                     className={`${
                       work.isLargeTitle
-                        ? "text-2xl sm:text-3xl lg:text-4xl xl:text-5xl"
-                        : "text-xl sm:text-2xl lg:text-3xl xl:text-4xl"
-                    } font-black uppercase tracking-tight text-white mb-2 sm:mb-3 leading-[1.05]`}
+                        ? "text-2xl sm:text-3xl lg:text-4xl"
+                        : "text-lg sm:text-xl lg:text-2xl"
+                    } font-black uppercase tracking-tight text-white mb-1.5 sm:mb-2 leading-[1.05]`}
                   >
                     {work.title}
                   </h3>
 
-                  <p className="text-white/85 text-sm sm:text-base md:text-lg font-normal leading-relaxed max-w-xl mb-4 sm:mb-5 line-clamp-2">
+                  <p className="text-white/85 text-xs sm:text-sm font-normal leading-relaxed max-w-xl mb-3 sm:mb-4 line-clamp-2">
                     {work.description}
                   </p>
 

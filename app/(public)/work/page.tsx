@@ -52,11 +52,22 @@ export default function WorkPage() {
         </div>
       </div>
 
-      {/* Grid — Matching Our Services UI/Feel */}
+      {/* Grid — Matching Our Services UI/Feel & Compact Scale */}
       <div className="container mx-auto px-6 max-w-7xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-5 lg:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 sm:gap-5">
           {filteredProjects.map((project, i) => {
-            const isWide = i % 3 === 0;
+            const isOddTotal = filteredProjects.length % 2 !== 0;
+            const isLastItem = i === filteredProjects.length - 1;
+            const pattern = i % 4;
+
+            // Modular 7/5 and 5/7 asymmetric rhythm matching services page
+            let colSpanClass = "col-span-1 md:col-span-1 lg:col-span-7";
+            if (isOddTotal && isLastItem) {
+              colSpanClass = "col-span-1 md:col-span-2 lg:col-span-12";
+            } else if (pattern === 1 || pattern === 2) {
+              colSpanClass = "col-span-1 md:col-span-1 lg:col-span-5";
+            }
+
             const indexStr = String(i + 1).padStart(2, "0");
 
             return (
@@ -64,10 +75,8 @@ export default function WorkPage() {
                 href={`/work/${project.slug}`}
                 key={project.id}
                 className={cn(
-                  "group relative overflow-hidden rounded-xl bg-[#111111] border border-neutral-800 hover:border-[#E52525] transition-all duration-300 shadow-xl flex flex-col justify-between col-span-1 min-h-[340px]",
-                  isWide
-                    ? "md:col-span-2 lg:col-span-8 lg:min-h-[420px]"
-                    : "md:col-span-1 lg:col-span-4 lg:min-h-[420px]"
+                  "group relative overflow-hidden rounded-xl bg-[#111111] border border-neutral-800 hover:border-[#E52525] transition-all duration-300 shadow-xl flex flex-col justify-between min-h-[250px] sm:min-h-[270px] lg:min-h-[285px] xl:min-h-[300px]",
+                  colSpanClass
                 )}
               >
                 {/* Authentic Agigraphix Photography */}
@@ -85,9 +94,9 @@ export default function WorkPage() {
                 <div className="absolute top-0 left-0 right-0 h-[3px] bg-transparent group-hover:bg-[#E52525] transition-colors duration-300 z-20" />
 
                 {/* Card Header: Project Number and Location/Year */}
-                <div className="relative z-20 p-6 sm:p-7 flex items-center justify-between">
+                <div className="relative z-20 p-5 sm:p-6 flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
-                    <span className="text-[#E52525] font-black text-sm tracking-widest font-mono">
+                    <span className="text-[#E52525] font-black text-sm sm:text-base tracking-widest font-mono">
                       {indexStr}
                     </span>
                     <span className="h-[2px] w-6 bg-[#E52525] group-hover:w-10 transition-all duration-300" />
@@ -98,16 +107,16 @@ export default function WorkPage() {
                 </div>
 
                 {/* Card Footer: Category, Title, Description, and CTA */}
-                <div className="relative z-20 p-6 sm:p-7 flex flex-col justify-end">
+                <div className="relative z-20 p-5 sm:p-6 flex flex-col justify-end">
                   <p className="text-[#E52525] text-xs font-bold uppercase tracking-widest mb-1.5">
                     {project.category} &middot; {project.industry}
                   </p>
 
-                  <h3 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-white mb-2 leading-tight">
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-black uppercase tracking-tight text-white mb-1.5 sm:mb-2 leading-tight">
                     {project.title}
                   </h3>
 
-                  <p className="text-white/85 text-xs sm:text-sm font-normal leading-relaxed line-clamp-2 mb-4 max-w-xl">
+                  <p className="text-white/85 text-xs sm:text-sm font-normal leading-relaxed line-clamp-2 mb-3 sm:mb-4 max-w-xl">
                     {project.description}
                   </p>
 
