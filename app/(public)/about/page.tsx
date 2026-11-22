@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { CapabilitiesSection } from "@/components/sections/CapabilitiesSection";
 
 export default function AboutPage() {
   return (
@@ -51,30 +52,7 @@ export default function AboutPage() {
       </section>
 
       {/* Capabilities */}
-      <section className="py-24 bg-agigraphix-black text-white">
-        <div className="container mx-auto px-6 max-w-7xl">
-          <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4 text-center md:text-left">
-              Our Capabilities
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            {[
-              "CNC Routing",
-              "Laser Cutting",
-              "UV Printing",
-              "Large Format Printing",
-              "Acrylic Fabrication",
-              "Installation"
-            ].map((cap, i) => (
-              <div key={i} className="bg-white/5 border border-white/10 p-8 rounded flex items-center justify-center text-center hover:bg-white/10 transition-colors">
-                <h3 className="text-xl font-bold uppercase tracking-wider text-agigraphix-red">{cap}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <CapabilitiesSection />
       
       {/* CTA */}
       <section className="py-24 text-center bg-agigraphix-red text-white">
