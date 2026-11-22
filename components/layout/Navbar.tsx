@@ -12,8 +12,8 @@ function cn(...inputs: (string | undefined | null | false)[]) {
 }
 
 const navLinks = [
-  { name: "About us", href: "/about" },
   { name: "Our services", href: "/services" },
+  { name: "About us", href: "/about" },
   { name: "Previous Work", href: "/work" },
 ];
 
