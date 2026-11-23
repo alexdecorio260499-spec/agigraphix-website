@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { ArrowRight, ChevronLeft, ChevronRight, X, Maximize2 } from "lucide-react";
 import { ServiceGalleryImage } from "@/lib/service-galleries";
+import { capabilityNameToSlug } from "@/lib/service-capabilities";
 
 interface ServiceContentGalleryProps {
   title: string;
@@ -12,6 +13,7 @@ interface ServiceContentGalleryProps {
   gallery: ServiceGalleryImage[];
   ctaLink?: string;
   ctaText?: string;
+  serviceSlug?: string;
 }
 
 export function ServiceContentGallery({
@@ -21,6 +23,7 @@ export function ServiceContentGallery({
   gallery,
   ctaLink = "/contact",
   ctaText = "Explore our solutions",
+  serviceSlug,
 }: ServiceContentGalleryProps) {
   const [activeImageIndex, setActiveImageIndex] = useState<number | null>(null);
 
@@ -83,16 +86,33 @@ export function ServiceContentGallery({
 
             {/* Capabilities List */}
             <div className="mb-10">
-              <h2 className="text-xs font-bold uppercase tracking-widest text-[#E52525] mb-4">
-                Core Capabilities
-              </h2>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3.5 gap-x-6">
-                {capabilities.map((cap, i) => (
-                  <li key={i} className="flex items-center text-sm sm:text-base font-medium text-white/90">
-                    <span className="w-2 h-2 rounded-[2px] bg-[#E52525] mr-3 shrink-0" />
-                    <span>{cap}</span>
-                  </li>
-                ))}
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-xs font-bold uppercase tracking-widest text-[#E52525]">
+                  Core Capabilities
+                </h2>
+                <span className="text-[11px] uppercase tracking-wider text-neutral-400 font-medium hidden sm:inline-block">
+                  Click to explore project galleries &rarr;
+                </span>
+              </div>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                {capabilities.map((cap, i) => {
+                  const capSlug = capabilityNameToSlug(cap);
+                  const targetUrl = serviceSlug ? `/services/${serviceSlug}/${capSlug}` : "#";
+                  return (
+                    <li key={i}>
+                      <Link
+                        href={targetUrl}
+                        className="group flex items-center justify-between p-2.5 sm:p-3 rounded-lg bg-[#181818]/90 hover:bg-[#222222] border border-[#2A2A2A] hover:border-[#E52525] transition-all duration-200 text-sm font-medium text-white/90 hover:text-white shadow-sm"
+                      >
+                        <div className="flex items-center min-w-0 pr-2">
+                          <span className="w-2 h-2 rounded-[2px] bg-[#E52525] mr-2.5 shrink-0 group-hover:scale-125 transition-transform" />
+                          <span className="truncate">{cap}</span>
+                        </div>
+                        <ArrowRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-[#E52525] group-hover:translate-x-1 transition-all shrink-0" />
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
 

@@ -38,6 +38,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
         gallery={gallery}
         ctaLink="/contact"
         ctaText="Explore our solutions"
+        serviceSlug={slug}
       />
 
       {/* 2. SECONDARY SECTION: PRECISION & QUALITY */}
