@@ -1,4 +1,4 @@
-import { SlidersHorizontal, ShieldCheck, Target } from "lucide-react";
+import { SlidersHorizontal, ShieldCheck, Target, Clock } from "lucide-react";
 
 const VALUES = [
   {
@@ -7,9 +7,9 @@ const VALUES = [
     icon: SlidersHorizontal,
   },
   {
-    title: "QUALITY",
-    desc: "Materials and production are treated with care, ensuring longevity in demanding environments.",
-    icon: ShieldCheck,
+    title: "QUALITY ON TIME",
+    desc: "Uncompromising quality delivered strictly on schedule. Our responsive production team thrives under pressure, executing urgent turnarounds without ever cutting corners on craftsmanship.",
+    icon: Clock,
   },
   {
     title: "PRECISION",

@@ -6,7 +6,9 @@ import {
   Droplets, 
   Printer, 
   Layers, 
-  Wrench 
+  Wrench,
+  Flame,
+  Scissors
 } from "lucide-react";
 
 const CAPABILITIES = [
@@ -19,6 +21,10 @@ const CAPABILITIES = [
     icon: Zap,
   },
   {
+    name: "FIBER LASER CUTTING",
+    icon: Flame,
+  },
+  {
     name: "UV PRINTING",
     icon: Droplets,
   },
@@ -29,6 +35,10 @@ const CAPABILITIES = [
   {
     name: "ACRYLIC FABRICATION",
     icon: Layers,
+  },
+  {
+    name: "TAILOR MADE",
+    icon: Scissors,
   },
   {
     name: "INSTALLATION",
@@ -67,15 +77,15 @@ export function CapabilitiesSection() {
             </Link>
           </div>
 
-          {/* Right Column — ~65% width (3 × 2 grid) */}
+          {/* Right Column — ~65% width (4 × 2 grid) */}
           <div className="w-full lg:w-[65%] xl:w-[68%]">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
               {CAPABILITIES.map((cap, i) => {
                 const Icon = cap.icon;
                 return (
                   <div
                     key={i}
-                    className="bg-[#1D1D1D] hover:bg-[#232323] border border-[#343434] hover:border-[#E52525] rounded-lg p-6 sm:p-7 flex flex-col justify-between items-start min-h-[145px] sm:min-h-[155px] h-full transition-all duration-300 group cursor-default"
+                    className="bg-[#1D1D1D] hover:bg-[#232323] border border-[#343434] hover:border-[#E52525] rounded-lg p-5 sm:p-6 flex flex-col justify-between items-start min-h-[135px] sm:min-h-[145px] h-full transition-all duration-300 group cursor-default"
                   >
                     <div className="mb-6">
                       <Icon 
