@@ -67,14 +67,14 @@ export default function ServicesPage() {
         </p>
       </div>
 
-      {/* 4 Equally Shaped Cards — All visible without scrolling */}
+      {/* 2x2 Grid of Services — Wide, uncompressed landscape cards */}
       <div className="container mx-auto px-6 max-w-7xl">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {SERVICES.map((service) => (
             <Link
               key={service.number}
               href={service.route}
-              className="group relative overflow-hidden rounded-xl bg-[#111111] border border-neutral-800 hover:border-[#E52525] transition-all duration-300 shadow-xl flex flex-col justify-between h-[360px] sm:h-[400px] lg:h-[calc(100vh-270px)] lg:min-h-[380px] lg:max-h-[500px]"
+              className="group relative overflow-hidden rounded-xl bg-[#111111] border border-neutral-800 hover:border-[#E52525] transition-all duration-300 shadow-xl flex flex-col justify-between aspect-[16/10] sm:aspect-[16/9] lg:aspect-[16/8.5] min-h-[250px] sm:min-h-[280px] lg:min-h-[290px]"
             >
               {/* Authentic Agigraphix Photography */}
               <div
@@ -98,18 +98,18 @@ export default function ServicesPage() {
                   </span>
                   <span className="h-[2px] w-6 bg-[#E52525] group-hover:w-10 transition-all duration-300" />
                 </div>
-                <span className="text-white/40 text-[11px] font-bold tracking-wider uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  Agigraphix
+                <span className="text-white/40 text-xs font-bold tracking-wider uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  Agigraphix &middot; {service.title}
                 </span>
               </div>
 
               {/* Card Footer: Title, Tagline, and CTA */}
               <div className="relative z-20 p-5 sm:p-6 flex flex-col justify-end">
-                <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-white mb-1.5 sm:mb-2 leading-tight">
+                <h2 className="text-xl sm:text-2xl lg:text-3xl font-black uppercase tracking-tight text-white mb-1.5 sm:mb-2 leading-tight">
                   {service.title}
                 </h2>
 
-                <p className="text-white/80 text-xs sm:text-sm font-normal leading-relaxed line-clamp-2 mb-3 sm:mb-4">
+                <p className="text-white/85 text-xs sm:text-sm font-normal leading-relaxed max-w-xl mb-3 line-clamp-2">
                   {service.tagline}
                 </p>
 
