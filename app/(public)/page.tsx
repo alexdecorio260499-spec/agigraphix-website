@@ -57,8 +57,13 @@ export default function Home() {
                 Brands <span className="text-agigraphix-red">Visible.</span>
               </h1>
 
+              {/* Established Tagline */}
+              <p className="text-white/90 text-base sm:text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto text-center mb-3">
+                Established in 2001, Agigraphix has grown into Mauritius&apos;s premier visual communication and fabrication studio.
+              </p>
+
               {/* Introductory Paragraph */}
-              <p className="text-white/85 text-base sm:text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto text-center">
+              <p className="text-white/75 text-sm sm:text-base md:text-lg font-normal leading-relaxed max-w-2xl mx-auto text-center">
                 From bespoke signage and large-format printing to displays and branded environments, we turn ideas into physical experiences.
               </p>
             </div>

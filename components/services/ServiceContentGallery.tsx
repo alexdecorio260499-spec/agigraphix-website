@@ -62,9 +62,9 @@ export function ServiceContentGallery({
   }, [activeImageIndex, closeLightbox, prevImage, nextImage]);
 
   return (
-    <section className="bg-[#111111] text-white py-16 sm:py-20 lg:py-24 border-b border-[#222222]">
+    <section className="relative min-h-[calc(100vh-88px)] flex flex-col justify-center bg-[#111111] text-white py-16 sm:py-20 lg:py-24 border-b border-[#222222]">
       <div className="container mx-auto px-6 max-w-7xl">
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-16">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
           
           {/* LEFT COLUMN — SERVICE INFORMATION (~40% width) */}
           <div className="w-full lg:w-[40%] xl:w-[38%] shrink-0">
