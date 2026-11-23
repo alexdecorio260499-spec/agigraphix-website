@@ -86,14 +86,9 @@ export function ServiceContentGallery({
 
             {/* Capabilities List */}
             <div className="mb-10">
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="text-xs font-bold uppercase tracking-widest text-[#E52525]">
-                  Core Capabilities
-                </h2>
-                <span className="text-[11px] uppercase tracking-wider text-neutral-400 font-medium hidden sm:inline-block">
-                  Click to explore project galleries &rarr;
-                </span>
-              </div>
+              <h2 className="text-xs font-bold uppercase tracking-widest text-[#E52525] mb-4">
+                Core Capabilities
+              </h2>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 {capabilities.map((cap, i) => {
                   const capSlug = capabilityNameToSlug(cap);

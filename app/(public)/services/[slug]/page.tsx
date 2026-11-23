@@ -4,7 +4,6 @@ import { ArrowRight } from "lucide-react";
 import { MOCK_SERVICES } from "@/lib/data";
 import { getServiceGallery } from "@/lib/service-galleries";
 import { ServiceContentGallery } from "@/components/services/ServiceContentGallery";
-import { RelatedProductsSection } from "@/components/services/RelatedProductsSection";
 
 export async function generateStaticParams() {
   return [
@@ -91,9 +90,6 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
           </div>
         </div>
       </section>
-
-      {/* 3. RELATED PRODUCTS SHOWCASE */}
-      <RelatedProductsSection serviceSlug={slug} serviceName={service.name} />
     </div>
   );
 }
