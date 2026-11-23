@@ -259,7 +259,7 @@ export default function Home() {
       </section>
 
       {/* 3. FINAL CTA & STATS */}
-      <section className="relative min-h-screen flex flex-col justify-center items-center py-16 md:py-24 bg-agigraphix-black text-center overflow-hidden">
+      <section className="relative min-h-0 md:min-h-[calc(100vh-56px)] flex flex-col justify-center items-center py-10 sm:py-12 md:py-14 bg-agigraphix-black text-center overflow-hidden">
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center opacity-25 mix-blend-overlay"
           style={{ backgroundImage: "url('/images/AGIGRAPHIX_WEBSITE_ASSETS/01_SIGNAGE/Cut_Out_Letters/signage-cut-out-letters-009.webp')" }}
@@ -267,21 +267,23 @@ export default function Home() {
         <div className="absolute inset-0 z-0 bg-gradient-to-t from-agigraphix-black to-transparent" />
         
         <div className="container mx-auto px-6 max-w-7xl relative z-10 flex flex-col items-center justify-center">
-          <div className="mb-12 md:mb-16 w-full max-w-3xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter text-white mb-3 md:mb-4 leading-tight">
+          <div className="mb-8 md:mb-10 w-full max-w-3xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tighter text-white mb-2 sm:mb-3 leading-tight">
               Have a project <br /> in mind?
             </h2>
-            <p className="text-base md:text-lg font-medium text-white/80 mb-6 md:mb-8">Let's make it visible.</p>
+            <p className="text-sm sm:text-base font-medium text-white/80 mb-5 sm:mb-6">
+              Let&apos;s make it visible.
+            </p>
             <Link 
               href="/contact" 
-              className="px-8 py-3.5 bg-agigraphix-red text-white font-bold rounded text-base hover:bg-red-700 transition-colors inline-flex items-center shadow-lg"
+              className="px-7 py-3.5 bg-agigraphix-red text-white font-bold rounded text-sm sm:text-base hover:bg-red-700 transition-colors inline-flex items-center shadow-lg"
             >
-              Start a Project <ArrowRight className="ml-2 w-5 h-5" />
+              Start a Project <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </div>
 
-          <div className="w-full border-t border-white/20 pt-10 md:pt-12">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
+          <div className="w-full border-t border-white/20 pt-6 sm:pt-8 md:pt-10">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
               {[
                 { stat: "25+ YEARS", desc: "Industry experience" },
                 { stat: "BESPOKE", desc: "Tailored to your project" },
@@ -289,9 +291,9 @@ export default function Home() {
                 { stat: "PRECISION", desc: "Modern equipment & techniques" },
               ].map((item, i) => (
                 <div key={i} className="text-center md:text-left">
-                  <div className="w-8 md:w-10 h-1 bg-agigraphix-red mb-2 md:mb-3 mx-auto md:mx-0" />
-                  <h3 className="text-lg md:text-xl font-bold uppercase tracking-wide mb-1 text-white">{item.stat}</h3>
-                  <p className="text-xs md:text-sm text-white/60">{item.desc}</p>
+                  <div className="w-8 h-1 bg-agigraphix-red mb-2 mx-auto md:mx-0" />
+                  <h3 className="text-base sm:text-lg font-bold uppercase tracking-wide mb-0.5 text-white">{item.stat}</h3>
+                  <p className="text-xs text-white/60">{item.desc}</p>
                 </div>
               ))}
             </div>
